@@ -12,8 +12,7 @@ yo --no-insight hubot \
  --defaults
 EOF
 
-sed -i -e"s/.*hubot-heroku-keepalive.*//g" /opt/dat/package.json
-sed -i -e"s/.*hubot-heroku-keepalive.*//g" /opt/dat/external-scripts.json
-
-
-sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+sed -i -e"s/.*hubot-heroku-keepalive.*//g" /opt/dat/package.json && \
+sed -i -e"s/.*hubot-heroku-keepalive.*//g" /opt/dat/external-scripts.json && \
+sed -i -e"s/.*hubot-redis-brain.*//g" /opt/dat/package.json && \
+sed -i -e"s/.*hubot-redis-brain.*//g" /opt/dat/external-scripts.json
